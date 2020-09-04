@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.phone {
+  width: 340px;
+  height: 600px;
+  border-radius: 15px;
+  border: 3px solid #eee;
+  overflow: hidden;
+  position: relative;
+}
+
+.phone .content {
+  opacity: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.4s ease;
+  height: calc(100% - 60px);
+}
+
+.phone .content.show {
+  opacity: 1;
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: -15px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+}
+
+nav ul li {
+  cursor: pointer;
+  color: #777;
+  text-align: center;
+  padding: 10px;
+  flex: 1;
+}
+
+nav ul li:hover,
+nav ul li.active {
+  color: salmon;
+}
+
+nav ul li p {
+  font-size: 12px;
+  margin: 2px 0;
+}
